@@ -1,0 +1,99 @@
+{
+  /*
+   * Editor settings.
+   */
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  "editor.tabSize": 2,
+  "editor.fontSize": 15,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.renderLineHighlight": "gutter",
+  "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+  "emmet.syntaxProfiles": { "javascript": "jsx" },
+
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+
+  "files.autoSave": "off",
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": { "files.trimTrailingWhitespace": false },
+
+  "javascript.updateImportsOnFileMove.enabled": "never",
+
+  "terminal.explorerKind": "integrated",
+  "terminal.integrated.experimentalUseTitleEvent": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.rendererType": "canvas",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+  // "window.zoomLevel": -1,
+
+  "workbench.colorCustomizations": {},
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+
+  /*
+   * Plugin related
+   */
+
+  "discord.detailsEditing": "{filename} | {workspace}",
+  "discord.lowerDetailsEditing": "Line: {currentline}/{totallines} | {filesize}",
+  "discord.workspaceElapsedTime": true,
+
+  "eslint.alwaysShowStatus": true,
+  "eslint.lintTask.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  "liveshare.codeLens": false,
+  "liveshare.connectionMode": "relay",
+  "liveshare.featureSet": "insiders",
+  "editor.minimap.enabled": false,
+  "material-icon-theme.folders.associations": {
+    ".idea": "config",
+    "cooldown": "helper",
+    "discord": "helper",
+    "en-US": "i18n",
+    "guild": "resource",
+    "listeners": "event",
+    "loaders": "tools",
+    "structures": "core",
+    "infra": "app",
+    "entities": "class",
+    "schemas": "class",
+    "typeorm": "database",
+    "repositories": "mappings",
+    "http": "container",
+    "migrations": "tools",
+    "modules": "components",
+    "implementations": "core",
+    "dtos": "typescript",
+    "fakes": "mock",
+    "websockets": "pipe",
+    "protos": "pipe",
+    "grpc": "pipe"
+},
+"window.zoomLevel": 0,
+"files.eol": "\n",
+"[javascriptreact]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"workbench.colorTheme": "Omni",
+"typescript.updateImportsOnFileMove.enabled": "always",
+}
