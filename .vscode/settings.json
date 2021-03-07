@@ -47,9 +47,8 @@
    * Plugin related
    */
 
-  "discord.detailsEditing": "{filename} | {workspace}",
-  "discord.lowerDetailsEditing": "Line: {currentline}/{totallines} | {filesize}",
-  "discord.workspaceElapsedTime": true,
+   "discord.detailsEditing": "{file_name} | {workspace}",
+   "discord.lowerDetailsEditing": "Line: {current_line}/{total_lines} | {file_size}",
 
   "eslint.alwaysShowStatus": true,
   "eslint.lintTask.enable": true,
@@ -96,4 +95,8 @@
 },
 "workbench.colorTheme": "Omni",
 "typescript.updateImportsOnFileMove.enabled": "always",
+
+// Elixir
+"elixirLS.dialyzerEnabled": false,
+"elixirLS.suggestSpecs": false,
 }
