@@ -1,8 +1,26 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
+source $HOME/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Syntax highlighting bundle.
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle command-not-found
+antigen bundle gitignore
+antigen bundle nvm
+antigen bundle npm
+
+# Load the theme.
+antigen theme spaceship-prompt/spaceship-prompt
+
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.dotfiles"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,9 +88,9 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git nvm)
+plugins=(asdf)
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -99,6 +117,12 @@ ZSH_THEME="spaceship"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls="exa --icons"
+alias cat="bat --style=auto"
+alias ps="procs"
+alias top="ytop"
+
+source $HOME/.asdf
 
 # SPACESHIP CONFIGURATION
 
@@ -117,8 +141,10 @@ SPACESHIP_PROMPT_ORDER=(
 
 )
 
-SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+
 SPACESHIP_CHAR_SYMBOL="λ"
+# SPACESHIP_CHAR_PREFIX="\n"
 SPACESHIP_CHAR_SUFFIX=" "
 
 SPACESHIP_TIME_SHOW=true
@@ -126,23 +152,6 @@ SPACESHIP_TIME_FORMAT="%T"
 
 SPACESHIP_USER_SHOW=needed
 SPACESHIP_PACKAGE_SHOW=false
-
-source $HOME/antigen.zsh
-
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-
-# Syntax highlighting bundle.
-antigen bundle git
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle command-not-found
-antigen bundle gitignore
-antigen bundle nvm
-antigen bundle npm
-
-# Load the theme.
-antigen theme spaceship-prompt/spaceship-prompt
 
 # Tell Antigen that you're done.
 antigen apply
