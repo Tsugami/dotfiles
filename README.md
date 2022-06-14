@@ -7,7 +7,7 @@ ___________                  ________          __    _____.__.__
              \/                      \/                                \/     \/
 ```
 
-if you unzipped your `.ssh` folder from the FAT formatted Pendrive, It's the permissions would not have been kept, you would need to run:
+if you unzipped your `.ssh` folder from the FAT formatted pendrive, It's the permissions would not have been kept, you would need to run:
 
 ```sh
 sudo chmod -R 700 "$HOME/.ssh"; chmod -R 600 "$HOME/.ssh";
