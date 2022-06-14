@@ -121,6 +121,12 @@ alias ls="exa --icons"
 alias cat="bat --style=auto"
 alias ps="procs"
 alias top="ytop"
+# This alias creates a pull request and merge like squash
+alias prs="gh pr create --fill && gh pr merge -sd --admin"
+alias dotfiles="cd $HOME/.dotfiles"
+alias dev="cd $HOME/development"
+# Git aliases
+alias gcb="git checkout -b"
 
 source $HOME/.asdf
 
