@@ -1,0 +1,10 @@
+[user]
+	email = yslanramos.r@gmail.com
+	name = Yslan Ramos
+
+[init]
+ 	default = main
+[core]
+	editor = vim
+[alias]
+	cb = checkout -b
