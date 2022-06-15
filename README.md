@@ -12,3 +12,12 @@ if you unzipped your `.ssh` folder from the FAT formatted pendrive, It's the per
 ```sh
 sudo chmod -R 700 "$HOME/.ssh"; chmod -R 600 "$HOME/.ssh";
 ```
+
+Create hard links to your machine use the files without having to copy (TODO: create a script to create all hard links)
+
+```sh
+# Run in dotfiles folder to ensure
+cd ~/.dotfiles
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+```
+
