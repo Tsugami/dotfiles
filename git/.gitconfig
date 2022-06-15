@@ -8,3 +8,5 @@
 	editor = vim
 [alias]
 	cb = checkout -b
+	ph = pull origin HEAD
+	m = commit -m
