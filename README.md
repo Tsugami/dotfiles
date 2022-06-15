@@ -18,6 +18,7 @@ Create hard links to your machine use the files without having to copy (TODO: cr
 ```sh
 # Run in dotfiles folder to ensure
 cd ~/.dotfiles
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
+ln -s ~/git/.gitconfig ~/.gitconfig
 ```
 
