@@ -15,7 +15,7 @@ sudo chmod -R 700 "$HOME/.ssh"; chmod -R 600 "$HOME/.ssh";
 ## Installation
 
 ```sh
-curl -L https://raw.githubusercontent.com/Tsugami/dotfiles/master/install.sh
+curl -L https://raw.githubusercontent.com/Tsugami/dotfiles/master/install.sh | bash
 ```
 
 ## Overview
