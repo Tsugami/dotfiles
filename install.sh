@@ -2,7 +2,7 @@
 
 if [ ! -d "$HOME/.dotfiles" ]; then
     echo "Installing Tsu Dotfiles for the first time in $HOME/.dotfiles"
-    git clone --depth=1 https://github.com/Tsugami/dotfiles.git "$HOME/.dotfiles"
+    git clone --depth=1 git@github.com:Tsugami/dotfiles.git "$HOME/.dotfiles"
     cd "$HOME/.dotfiles"
     ./bootstrap.sh
 else
