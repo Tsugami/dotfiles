@@ -1,7 +1,7 @@
 alias ls="exa --icons"
 alias cat="bat --style=auto"
 alias ps="procs"
-alias top="ytop"
+alias top="btm"
 
 # Git aliases
 alias gcb="git checkout -b"
