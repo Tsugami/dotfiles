@@ -22,6 +22,7 @@ fail() {
   exit
 }
 
+# Create hard links to your machine use the files without having to copy them.
 create_hard_link() {
   local src="$HOME/.dotfiles/$1" dst=$2
 
@@ -34,18 +35,25 @@ create_hard_link() {
   info "Created hard link: $dst"
 }
 
+# Install specific dotfiles in WSL
+install_wsl_dotfiles() {
+  if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
+    info "Install WSL dotfiles"
+
+    # WSL paths
+    create_hard_link .vscode/settings.json "$HOME/.vscode-server/data/Machine/settings.json"
+  fi
+}
 
 install_dotfiles() {
   info 'installing dotfiles'
 
-  # Create hard links to your machine use the files without having to copy them.
   create_hard_link zsh/zshrc/.zshrc "$HOME/.zshrc"
   create_hard_link git/.gitconfig "$HOME/.gitconfig"
-  # WSL paths
-  create_hard_link .vscode/settings.json "$HOME/.vscode-server/data/Machine/settings.json"
 }
 
 install_dotfiles
+install_wsl_dotfiles
 
 echo ''
-success '  All installed!'
+success 'All installed!'
