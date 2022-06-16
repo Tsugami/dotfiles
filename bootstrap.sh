@@ -50,6 +50,7 @@ install_dotfiles() {
 
   create_hard_link zsh/zshrc/.zshrc "$HOME/.zshrc"
   create_hard_link git/.gitconfig "$HOME/.gitconfig"
+  create_hard_link system/.profile "$HOME/.profile"
 }
 
 install_dotfiles
