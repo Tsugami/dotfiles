@@ -25,7 +25,7 @@ fail() {
 create_hard_link() {
   local src="$HOME/.dotfiles/$1" dst=$2
 
-  if [ -L "$dst" ]; then
+  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
     info "Delete old file: $dst"
     rm -rf "$dst"
   fi
@@ -41,6 +41,8 @@ install_dotfiles() {
   # Create hard links to your machine use the files without having to copy them.
   create_hard_link zsh/zshrc/.zshrc "$HOME/.zshrc"
   create_hard_link git/.gitconfig "$HOME/.gitconfig"
+  # WSL paths
+  create_hard_link .vscode/settings.json "$HOME/.vscode-server/data/Machine/settings.json"
 }
 
 install_dotfiles
