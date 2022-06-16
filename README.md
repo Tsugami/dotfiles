@@ -27,3 +27,5 @@ curl -L https://raw.githubusercontent.com/Tsugami/dotfiles/master/install.sh | b
 - [procs](https://github.com/dalance/procs) - alternative to `ps`, tool for getting information about processes. It provides convenient, human-readable (and colored) output format by default.
 - [exa](https://github.com/ogham/exa) - alternative to `ls`, tool for listing directory contents.
 - [bat](https://github.com/sharkdp/bat) - alternative to `cat`, tool for see files with syntax highlighting.
+- [Github CLI](https://cli.github.com/) - Tool for working with Github from command line (create PR, issues, etc)
+
