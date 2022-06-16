@@ -2,11 +2,10 @@
 
 1. Install [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&gl=BR).
 2. Install [Chocolatey](https://chocolatey.org/).
-3. Run this file in PowerShell as administrator
+3. Run this command in PowerShell as administrator
 ```
-Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('file_uri'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Tsugami/dotfiles/master/window/install.ps1'))
 ```
-
 
 ## Overview
 
