@@ -47,7 +47,25 @@
   "defaultProfile": "{5a069d55-87bd-57cf-8a07-2726b203d3e5}",
   "profiles": {
     "defaults": {
-      "colorScheme": "Nord"
+      "colorScheme": "Nord",
+      "font": {
+        "face": "FiraCode Nerd Font",
+        "size": 14,
+        "weight": "normal",
+        "features": {
+          "cv02": 1,
+          "cv14": 1,
+          "cv25": 1,
+          "cv26": 1,
+          "cv28": 1,
+          "cv32": 1,
+          "ss02": 1,
+          "ss03": 1,
+          "ss05": 1,
+          "ss07": 1,
+          "ss09": 1
+        }
+      }
     },
     "list": [
       {

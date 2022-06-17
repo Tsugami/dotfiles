@@ -1,0 +1,1 @@
+[Environment]::SetEnvironmentVariable('EDITOR','vscode')
