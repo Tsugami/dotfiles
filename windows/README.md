@@ -7,13 +7,13 @@
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Tsugami/dotfiles/master/windows/install.ps1'))
 ```
 
-To install Windows dependents, run the `deps.ps1`:
+To install Windows dependents, run the [`deps.ps1`](https://github.com/Tsugami/dotfiles/blob/master/windows/deps.ps1):
 
 ```powershell
 . deps.ps1
 ```
 
-You should run `bootstrap.ps1` to update something:
+You should run [`bootstrap.ps1`](https://github.com/Tsugami/dotfiles/blob/master/windows/bootstrap.ps1) to update something:
 
 ```powershell
 . bootstrap.ps1
