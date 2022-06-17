@@ -10,4 +10,15 @@
 	cb = checkout -b
 	ph = pull origin HEAD
 	m = commit -m
-  rsh = reset --soft HEAD~1
+        rsh = reset --soft HEAD~1
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+	branch = magenta
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
