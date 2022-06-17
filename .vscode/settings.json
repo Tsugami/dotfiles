@@ -12,7 +12,7 @@
   // Editor fonts
   "editor.tabSize": 2,
   "editor.fontSize": 15,
-  "editor.fontFamily": "JetBrains Mono, Fira Code, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "JetBrains Mono, FiraCode Nerd Font, Fira Code, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   // Live share
   "liveshare.codeLens": false,

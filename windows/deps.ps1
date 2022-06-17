@@ -4,6 +4,7 @@ choco install microsoft-windows-terminal
 
 choco install firacode
 choco install firacodenf
+choco install jetbrainsmono
 
 choco install vscode
 choco install vim

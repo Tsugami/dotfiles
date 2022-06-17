@@ -1,7 +1,14 @@
+function New-Dir {
+  param(
+    [Parameter()]
+    [string]$Path
+  )
+  New-Item $ProfileDir -ItemType Directory -Force -ErrorAction SilentlyContinue
+}
+
 $DotFileDir = Join-Path $env:USERPROFILE .dotfiles
 $ProfileDir = Split-Path -parent $profile
-
-New-Item $ProfileDir -ItemType Directory -Force -ErrorAction SilentlyContinue
+$VscodeDir = Join-Path $env:APPDATA '\Code\User'
 
 # https://docs.microsoft.com/en-us/windows/terminal/install#settings-json-file
 #
@@ -10,8 +17,11 @@ New-Item $ProfileDir -ItemType Directory -Force -ErrorAction SilentlyContinue
 $WterminalDir = Join-Path $env:LOCALAPPDATA '\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState'
 $Wterminal1Dir = Join-Path $env:LOCALAPPDATA '\Microsoft\Windows Terminal'
 
-New-Item $WterminalDir -ItemType Directory -Force -ErrorAction SilentlyContinue
-New-Item $Wterminal1Dir -ItemType Directory -Force -ErrorAction SilentlyContinue
+# Create the directories if it doesn't exist
+New-Dir $VscodeDir
+New-Dir $ProfileDir
+New-Dir $WterminalDir
+New-Dir $Wterminal1Dir
 
 Push-Location $DotFileDir
 Copy-Item -Path ./git/** -Destination $home
@@ -19,4 +29,5 @@ Copy-Item -Path ./windows/powershell/** -Destination $ProfileDir
 Copy-Item -Path ./windows/powershell/** -Destination $ProfileDir
 Copy-Item -Path ./windows/window-terminal/** -Destination $WterminalDir
 Copy-Item -Path ./windows/window-terminal/** -Destination $Wterminal1Dir
+Copy-Item -Path ./.vscode/** -Destination $VscodeDir
 Pop-Location
