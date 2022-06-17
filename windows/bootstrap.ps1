@@ -15,8 +15,8 @@ New-Item $Wterminal1Dir -ItemType Directory -Force -ErrorAction SilentlyContinue
 
 Push-Location $DotFileDir
 Copy-Item -Path ./git/** -Destination $home
-Copy-Item -Path ./window/powershell/** -Destination $ProfileDir
-Copy-Item -Path ./window/powershell/** -Destination $ProfileDir
-Copy-Item -Path ./window/window-terminal/** -Destination $WterminalDir
-Copy-Item -Path ./window/window-terminal/** -Destination $Wterminal1Dir
+Copy-Item -Path ./windows/powershell/** -Destination $ProfileDir
+Copy-Item -Path ./windows/powershell/** -Destination $ProfileDir
+Copy-Item -Path ./windows/window-terminal/** -Destination $WterminalDir
+Copy-Item -Path ./windows/window-terminal/** -Destination $Wterminal1Dir
 Pop-Location

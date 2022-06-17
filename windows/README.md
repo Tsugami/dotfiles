@@ -4,10 +4,10 @@
 2. Run this command in PowerShell as administrator
 
 ```powershell
-Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Tsugami/dotfiles/master/window/install.ps1'))
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Tsugami/dotfiles/master/windows/install.ps1'))
 ```
 
-To install window dependents, run the `deps.ps1`:
+To install Windows dependents, run the `deps.ps1`:
 
 ```powershell
 . deps.ps1
