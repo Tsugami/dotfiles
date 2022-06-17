@@ -29,6 +29,8 @@
 	l =  log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	# Push current branch
 	psh = git push -u origin HEAD
+	# List git aliases
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | grep -v ^'alias '
 [color "status"]
 	added = yellow
 	changed = green
