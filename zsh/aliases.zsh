@@ -21,3 +21,5 @@ alias ....="cd ../../.."
 alias d='docker $*'
 alias d-c='docker-compose $*'
 
+# Node aliases
+alias clear-node="find . -name "node_modules" -type d -prune | xargs du -chs"
