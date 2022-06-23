@@ -4,7 +4,7 @@
    */
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -1,
   // Identify code when saved
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
