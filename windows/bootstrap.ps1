@@ -9,6 +9,7 @@ function New-Dir {
 $DotFileDir = Join-Path $env:USERPROFILE .dotfiles
 $ProfileDir = Split-Path -parent $profile
 $VscodeDir = Join-Path $env:APPDATA '\Code\User'
+$DevelopmentDir = Join-Path $env:USERPROFILE '/Documents/development'
 
 # https://docs.microsoft.com/en-us/windows/terminal/install#settings-json-file
 #
@@ -22,6 +23,7 @@ New-Dir $VscodeDir
 New-Dir $ProfileDir
 New-Dir $WterminalDir
 New-Dir $Wterminal1Dir
+New-Dir $DevelopmentDir
 
 Push-Location $DotFileDir
 Copy-Item -Path ./git/** -Destination $home
