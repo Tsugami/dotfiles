@@ -48,9 +48,9 @@ SPACESHIP_PROMPT_ORDER=(
     haskell # Haskell Stack section
     elixir  # Elixir section
     rust    # Rust section
-    docker  # Docker section
-
 )
+
+SPACESHIP_DOCKER_SHOW=false
 
 SPACESHIP_PROMPT_ADD_NEWLINE=true
 
