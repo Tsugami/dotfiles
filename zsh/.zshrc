@@ -31,6 +31,11 @@ if [[ -a $DOTFILES_ROOT/zsh/aliases.zsh ]]; then
   source $DOTFILES_ROOT/zsh/aliases.zsh
 fi
 
+# Load functions
+if [[ -a $DOTFILES_ROOT/zsh/functions.zsh ]]; then
+  source $DOTFILES_ROOT/zsh/functions.zsh
+fi
+
 # Load the theme.
 antigen theme spaceship-prompt/spaceship-prompt
 
