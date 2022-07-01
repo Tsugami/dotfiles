@@ -36,7 +36,7 @@
 	# View the current working tree status using the short format
 	s = status -s
 	st = status -s
-
+	clean-branchs = git remote prune origin
 [color "status"]
 	added = yellow
 	changed = green
