@@ -24,7 +24,9 @@ antigen bundle npm
 
 plugins=(asdf ssh-agent)
 
-source $HOME/.asdf
+if [[ -a $HOME/.asdf/asdf.sh ]]; then
+  . $HOME/.asdf/asdf.sh
+fi
 
 # Load aliases
 if [[ -a $DOTFILES_ROOT/zsh/aliases.zsh ]]; then
