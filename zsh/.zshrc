@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export DOTFILES_ROOT="$HOME/.dotfiles"
 
 # Loads user exports variables
 if [[ -a $DOTFILES_ROOT/zsh/.exports.zsh ]]; then
@@ -23,7 +24,6 @@ antigen bundle npm
 
 plugins=(asdf ssh-agent)
 
-source $ZSH/oh-my-zsh.sh
 source $HOME/.asdf
 
 # Load aliases
@@ -37,37 +37,17 @@ if [[ -a $DOTFILES_ROOT/zsh/functions.zsh ]]; then
 fi
 
 # Load the theme.
-antigen theme spaceship-prompt/spaceship-prompt
+antigen theme romkatv/powerlevel10k
 
-# Theme settings.
-ZSH_THEME="spaceship"
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-SPACESHIP_PROMPT_ORDER=(
-    time    # Time stamps section
-    user    # Username section
-    dir     # Current directory section
-    git     # Git section (git_branch + git_status)
-    char    # Prompt character
-    node    # Node.js section
-    golang  # Go section
-    haskell # Haskell Stack section
-    elixir  # Elixir section
-    rust    # Rust section
-)
-
-SPACESHIP_DOCKER_SHOW=false
-
-SPACESHIP_PROMPT_ADD_NEWLINE=true
-
-SPACESHIP_CHAR_SYMBOL="λ"
-# SPACESHIP_CHAR_PREFIX="\n"
-SPACESHIP_CHAR_SUFFIX=" "
-
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_TIME_FORMAT="%T"
-
-SPACESHIP_USER_SHOW=needed
-SPACESHIP_PACKAGE_SHOW=false
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Tell Antigen that you're done.
 antigen apply
