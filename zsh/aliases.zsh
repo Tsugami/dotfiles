@@ -1,10 +1,23 @@
-alias ls="exa --icons"
-alias cat="bat --style=auto"
-alias ps="procs"
-alias top="btm"
+if [ -x "$(command -v exa)" ]; then
+  alias ls="exa --icons"
+fi
 
-# Gihub CLI aliases
-alias prs="gh pr create --fill && gh pr merge -sd --admin" # This alias creates a pull request and merge like squash
+if [ -x "$(command -v bat)" ]; then
+  alias cat="bat --style=auto"
+fi
+
+if [ -x "$(command -v procs)" ]; then
+  alias ps="procs"
+fi
+
+if [ -x "$(command -v btm)" ]; then
+  alias top="btm"
+fi
+
+  # Gihub CLI aliases
+if [ -x "$(command -v gh)" ]; then
+  alias prs="gh pr create --fill && gh pr merge -sd --admin" # This alias creates a pull request and merge like squash
+fi
 
 # Common aliases
 alias cls='clear'
@@ -18,8 +31,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Docker aliases
-alias d='docker $*'
-alias d-c='docker-compose $*'
+if [ -x "$(command -v gh)" ]; then
+  alias d='docker $*'
+  alias d-c='docker-compose $*'
+fi
 
 # Node aliases
 alias clear-node="find . -name "node_modules" -type d -prune | xargs du -chs"
