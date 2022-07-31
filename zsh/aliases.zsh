@@ -25,7 +25,7 @@ alias reload!='. ~/.zshrc'
 
 # Directory aliases
 alias dotfiles="cd $HOME/.dotfiles"
-alias dev="cd $HOME/development"
+alias dev="cd $HOME/dev"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
