@@ -6,9 +6,10 @@
  	default = main
 [core]
 	editor = vim
+	pager = delta
 [alias]
 	# Defaults for aliases
-	# - aliases starting with:
+	# - aliases starting with:q
 	#  - `ps` are for push
 	#  - `l` are for log
 	#  - `c` are for commit
@@ -48,4 +49,14 @@
 	frag = magenta bold
 	old = red bold
 	new = green bold
-
+[commit]
+	template = /home/yslan/.git_commit_msg_template.txt
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+	line-numbers = true
+[merge]
+    conflictstyle = diff3
+[diff]
+	colorMoved = default
