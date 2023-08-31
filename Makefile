@@ -3,4 +3,7 @@ link:
 	ln -s -f $(PWD)/.zshrc $(HOME)/.zshrc
 	ln -s -f $(PWD)/.p10k.zsh $(HOME)/.p10k.zsh 
 
-setup: link
+ensure-development-folder:
+	mkdir $(HOME)/development -p
+
+setup: ensure-development-folder link
