@@ -1,0 +1,3 @@
+[submodule ".config/tmux"]
+	path = .config/tmux
+	url = git@github.com:Tsugami/.tmux.git
