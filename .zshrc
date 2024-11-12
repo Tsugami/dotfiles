@@ -14,6 +14,8 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
+export ZSH_PLUGINS="$HOME/.oh-my-zsh/plugins"	
+export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 export EDITOR="vim"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -135,5 +137,23 @@ if [ -x "$(command -v btm)" ]; then
 	  alias top="btm"
 fi
 
-alias dev="cd $HOME/development"
+. "$HOME/.asdf/asdf.sh"
 
+alias dev="cd $HOME/development"
+alias p="pnpm"
+alias k="kubectl"
+source <(kubectl completion zsh)
+
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+. ~/.asdf/plugins/golang/set-env.zsh
+
+export GOPATH=$(asdf where golang)/packages
+export GOROOT=$(asdf where golang)/go
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+export PATH="$PATH:/opt/nvim/bin"
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
