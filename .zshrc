@@ -14,9 +14,10 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_PLUGINS="$HOME/.oh-my-zsh/plugins"	
+export ZSH_PLUGINS="$HOME/.oh-my-zsh/plugins"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 export EDITOR="vim"
+export DEV_HOME="$HOME/development"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -91,7 +92,10 @@ plugins=(
   command-not-found
   docker
   docker-compose
+  aws
 )
+
+ZSH_DOTENV_PROMPT=Always
 
 source $ZSH/oh-my-zsh.sh
 
@@ -138,9 +142,26 @@ if [ -x "$(command -v btm)" ]; then
 fi
 
 . "$HOME/.asdf/asdf.sh"
+if [ -x "$(command -v pnpm)" ]; then
+	  alias p="pnpm"
+fi
 
-alias dev="cd $HOME/development"
-alias p="pnpm"
+if [ ! -d "$DEV_HOME" ]; then
+  mkdir $DEV_HOME -p
+fi
+
+if [ -x "$(command -v kubectl)" ]; then
+  alias k="kubectl"
+fi
+
+alias dev="cd $DEV_HOME"
+
+export JAVA_HOME=$(asdf where java)
+export ANDROID_HOME=$HOME/Android/Sdk
+
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+
 alias k="kubectl"
 source <(kubectl completion zsh)
 
