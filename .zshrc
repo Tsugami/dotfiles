@@ -142,16 +142,9 @@ if [ -x "$(command -v btm)" ]; then
 fi
 
 . "$HOME/.asdf/asdf.sh"
-if [ -x "$(command -v pnpm)" ]; then
-	  alias p="pnpm"
-fi
 
 if [ ! -d "$DEV_HOME" ]; then
   mkdir $DEV_HOME -p
-fi
-
-if [ -x "$(command -v kubectl)" ]; then
-  alias k="kubectl"
 fi
 
 alias dev="cd $DEV_HOME"
@@ -163,6 +156,9 @@ export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 
 alias k="kubectl"
+alias kx="kubectx"
+alias p="pnpm"
+
 source <(kubectl completion zsh)
 
 
