@@ -2,3 +2,8 @@
 if [ ! -d "$DEV_HOME" ]; then
   mkdir $DEV_HOME -p
 fi
+
+reload() {
+  source ~/.zshrc
+}
+
