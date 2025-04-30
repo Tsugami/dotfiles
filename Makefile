@@ -16,4 +16,3 @@ setup-tmux:
 
 ensure-development-folder:
 	mkdir $(HOME)/development -p
-

@@ -1,3 +1,12 @@
 [submodule ".config/tmux"]
 	path = .config/tmux
 	url = git@github.com:Tsugami/.tmux.git
+[submodule "ohmyzsh-custom/plugins/zsh-syntax-highlighting"]
+	path = ohmyzsh-custom/plugins/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "ohmyzsh-custom/plugins/zsh-autosuggestions"]
+	path = ohmyzsh-custom/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule "ohmyzsh-custom/themes/powerlevel10k"]
+	path = ohmyzsh-custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
