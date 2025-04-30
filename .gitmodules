@@ -10,3 +10,6 @@
 [submodule "ohmyzsh-custom/themes/powerlevel10k"]
 	path = ohmyzsh-custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "/home/baiacu/.dotfiles/ohmyzsh-custom/plugins/zsh-you-should-use"]
+	path = /home/baiacu/.dotfiles/ohmyzsh-custom/plugins/zsh-you-should-use
+	url = https://github.com/MichaelAquilina/zsh-you-should-use.git

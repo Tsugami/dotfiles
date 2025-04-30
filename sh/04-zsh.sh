@@ -14,6 +14,7 @@ plugins=(
   docker
   docker-compose
   aws
+  zsh-you-should-use
 ) 
 
 source $ZSH/oh-my-zsh.sh

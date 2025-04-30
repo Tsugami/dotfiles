@@ -17,3 +17,11 @@ setup-tmux:
 
 ensure-development-folder:
 	mkdir $(HOME)/development -p
+
+add_zsh_plugin:
+	@if [ "$(url)" = "" ]; then \
+		echo "Usage: make add_zsh_plugin url=<plugin_url>"; \
+		exit 1; \
+	fi
+	@mkdir -p $(DOTFILES)/ohmyzsh-custom/plugins
+	git submodule add $(url) $(DOTFILES)/ohmyzsh-custom/plugins/$(shell basename $(url) .git)
