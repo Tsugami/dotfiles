@@ -1,22 +1,26 @@
-all: download_git_modules ensure-development-folder setup-tmux link
-setup: all
+.PHONY: all setup download_git_modules setup_tmux link add_zsh_plugin
+
+all: setup
+setup: download_git_modules setup_tmux link
+	@echo "[INFO] Setup complete"
+	@echo "[WARNING] Please reload your shell to apply the changes"
 
 download_git_modules:
-	git fetch --all
-	git submodule update --init --recursive  --remote
-	git submodule foreach --recursive git submodule update --init --recursive
+	@echo "[INFO] Downloading git modules..."
+	@git fetch --all
+	@git submodule update --init --recursive --remote
+	@git submodule foreach --recursive git submodule update --init --recursive --remote
 
 link:
-	ln -s -f $(PWD)/.config/git $(HOME)/.config
-	ln -s -f $(PWD)/.zshrc $(HOME)
-	ln -s -f $(PWD)/.p10k.zsh $(HOME)
+	@echo "[INFO] Linking files..."
+	@ln -s -f $(PWD)/.config/git $(HOME)/.config
+	@ln -s -f $(PWD)/.zshrc $(HOME)
+	@ln -s -f $(PWD)/.p10k.zsh $(HOME)
 
-setup-tmux:
-	ln -s -f $(PWD)/.config/tmux/.tmux.conf $(HOME)
-	ln -s -f $(PWD)/.config/tmux/.tmux.conf.local $(HOME)
-
-ensure-development-folder:
-	mkdir $(HOME)/development -p
+setup_tmux:
+	@echo "[INFO] Linking tmux files..."
+	@ln -s -f $(PWD)/.config/tmux/.tmux.conf $(HOME)
+	@ln -s -f $(PWD)/.config/tmux/.tmux.conf.local $(HOME)
 
 add_zsh_plugin:
 	@if [ "$(url)" = "" ]; then \

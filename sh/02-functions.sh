@@ -4,6 +4,7 @@ if [ ! -d "$DEV_HOME" ]; then
 fi
 
 reload() {
+  cd $DOTFILES && git pull && make
   source ~/.zshrc
 }
 
