@@ -2,7 +2,8 @@ all: download_git_modules ensure-development-folder setup-tmux link
 setup: all
 
 download_git_modules:
-	git submodule update --init --recursive
+	git fetch --all
+	git submodule update --init --recursive  --remote
 	git submodule foreach --recursive git submodule update --init --recursive
 
 link:
