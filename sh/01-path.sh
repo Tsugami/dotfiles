@@ -54,6 +54,10 @@ fi
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
+if [ -x "$(command -v asdf)" ]; then
+  log_debug "Adding ASDF to PATH"
+  export PATH="$ASDF_DIR/shims:$PATH"
+fi
 
 # Path Golang based on ASDF
 if [ -d "$ASDF_DIR/plugins/golang" ]; then
