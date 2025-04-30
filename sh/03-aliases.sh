@@ -32,3 +32,6 @@ alias g="git"
 alias t="tmux"
 alias d="docker"
 alias dc="docker compose"
+
+alias ghpr="gh pr create -f"
+alias ghprd="gh pr create -f -d"
