@@ -12,6 +12,10 @@ if [ -x "$(command -v asdf)" ]; then
   asdf completion zsh > "$DOTFILES/completions/_asdf"
 fi
 
+if [ -x "$(command -v gh)" ]; then
+  log_debug "Adding gh completions"
+  gh completion -s $SHELL_NAME > "$DOTFILES/completions/_gh"
+fi
 
 if [ -x "$(command -v kubectl)" ]; then
   log_debug "Adding kubectl completions"
