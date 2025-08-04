@@ -22,6 +22,11 @@ if [ -x "$(command -v kubectl)" ]; then
   source <(kubectl completion $SHELL_NAME)
 fi
 
+if [ -x "$(command -v helmfile)" ]; then
+  log_debug "Adding helmfile completions"
+  source <(helmfile completion zsh)
+fi
+
 if [ -x "$(command -v terraform)" ]; then
   log_debug "Adding terraform autocomplete"
   complete -C $(which terraform) terraform
