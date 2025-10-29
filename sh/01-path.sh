@@ -36,7 +36,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 # Path Java
 if [ -d "$JAVA_HOME" ]; then
   export PATH=$PATH:$JAVA_HOME/bin
-fi  
+fi
 
 # Path Android
 if [ -d "$ANDROID_HOME" ]; then
@@ -64,5 +64,12 @@ if [ -d "$ASDF_DIR/plugins/golang" ]; then
   log_debug "Adding Golang to PATH based on ASDF"
   export GOPATH=$(asdf where golang)/packages
   export GOROOT=$(asdf where golang)/go
-  export PATH="$PATH:$(go env GOPATH)/bin" 
+  export PATH="$PATH:$(go env GOPATH)/bin"
+fi
+
+export BUN_INSTALL="$HOME/.bun"
+
+if [ -d "$BUN_INSTALL" ]; then
+  log_debug "Adding Bun to PATH"
+  export PATH="$BUN_INSTALL/bin:$PATH"
 fi

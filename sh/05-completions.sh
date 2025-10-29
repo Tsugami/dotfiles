@@ -42,3 +42,9 @@ for file in $DOTFILES/completions/*; do
   log_debug "Adding completion for $file"
   source $file
 done
+
+if [ -x "$(command -v bun)" ] && [ -d "$BUN_INSTALL/_bun" ]; then
+  log_debug "Adding bun completions"
+  source "$BUN_INSTALL/_bun"
+fi
+
