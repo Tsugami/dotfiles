@@ -17,6 +17,11 @@ if [ -x "$(command -v gh)" ]; then
   gh completion -s $SHELL_NAME > "$DOTFILES/completions/_gh"
 fi
 
+if [ -x "$(command -v bw)" ]; then
+  log_debug "Adding bitwarden completions"
+  eval "$(bw completion --shell $SHELL_NAME); compdef _bw bw;"
+fi
+
 if [ -x "$(command -v kubectl)" ]; then
   log_debug "Adding kubectl completions"
   source <(kubectl completion $SHELL_NAME)
