@@ -23,6 +23,7 @@ if command -v btm >/dev/null 2>&1
 end
 
 alias dev="cd $DEV_HOME"
+alias dotfiles="cd $DOTFILES"
 alias k="kubectl"
 alias kx="kubectx"
 alias p="pnpm"
