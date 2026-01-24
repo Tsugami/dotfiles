@@ -15,7 +15,6 @@ download_git_modules:
 link:
 	@echo "[INFO] Linking files..."
 	@ln -s -f $(PWD)/.config/git $(HOME)/.config
-	@ln -s -f $(PWD)/.p10k.zsh $(HOME)
 	@ln -s -f $(PWD)/.config/starship.toml $(HOME)/.config/starship.toml
 	@ln -s -f $(PWD)/.config/fish $(HOME)/.config
 

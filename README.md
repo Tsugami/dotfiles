@@ -45,13 +45,6 @@ curl -L https://raw.githubusercontent.com/Tsugami/dotfiles/main/install.sh | bas
 
 ## 🎯 Useful Commands
 
-### ZSH Plugin Management
-
-Add a new plugin:
-```bash
-make add_zsh_plugin url=https://github.com/user/plugin.git
-```
-
 Update all submodules:
 ```bash
 make download_git_modules
