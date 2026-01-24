@@ -1,17 +1,3 @@
 [submodule ".config/tmux"]
 	path = .config/tmux
 	url = git@github.com:Tsugami/.tmux.git
-[submodule "zsh/ohmyzsh-custom/plugins/zsh-syntax-highlighting"]
-	path = zsh/ohmyzsh-custom/plugins/zsh-syntax-highlighting
-	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
-[submodule "zsh/ohmyzsh-custom/plugins/zsh-autosuggestions"]
-	path = zsh/ohmyzsh-custom/plugins/zsh-autosuggestions
-	url = git@github.com:zsh-users/zsh-autosuggestions.git
-[submodule "zsh/ohmyzsh-custom/themes/powerlevel10k"]
-	path = zsh/ohmyzsh-custom/themes/powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k.git
-[submodule "zsh/ohmyzsh-custom/plugins/zsh-you-should-use"]
-	path = zsh/ohmyzsh-custom/plugins/zsh-you-should-use
-	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
-[submodule "ohmyzsh-custom/plugins/zsh-autosuggestions"]
-	url = zsh/ohmyzsh-custom/plugins/zsh-autosuggestions.url

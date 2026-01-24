@@ -9,7 +9,6 @@ ___________                  ________          __    _____.__.__
 ```
 # My Dotfiles
 
-
 This repository contains my personal configurations for development and daily use.
 
 ## Overview
@@ -20,8 +19,9 @@ This repository contains my personal configurations for development and daily us
 - [exa](https://github.com/ogham/exa) - alternative to `ls`, tool for listing directory contents.
 - [bat](https://github.com/sharkdp/bat) - alternative to `cat`, tool for see files with syntax highlighting.
 - [Github CLI](https://cli.github.com/) - Tool for working with Github from command line (create PR, issues, etc)
-- [Oh My Zsh](https://ohmyz.sh/) - Framework for managing ZSH configuration
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k) - ZSH theme
+
+- [Fish shell](https://fishshell.com/) - shell user-friendly
+- [starship](https://starship.rs/) - cool shell theme
 - [ASDF](https://asdf-vm.com/) - Version manager for same languages
 - [Tmux](https://github.com/tmux/tmux) - Terminal multiplexer
 - [Neovim](https://neovim.io/) - Modern text editor
@@ -39,11 +39,7 @@ curl -L https://raw.githubusercontent.com/Tsugami/dotfiles/main/install.sh | bas
 ├── .config/
 │   ├── git/          # Git configurations
 │   └── tmux/         # Tmux configurations
-├── sh/               # Configuration scripts
-│   ├── 01-path.sh    # PATH configurations
-│   ├── 02-aliases.sh # Custom aliases
-│   └── 03-exports.sh # Environment variables
-├── ohmyzsh-custom/   # Custom ZSH plugins
+│   └── fish/         # fish configurations
 └── Makefile         # Automation scripts
 ```
 
@@ -67,22 +63,6 @@ To update all configurations:
 ```bash
 make setup
 ```
-
-## 📝 Customization
-
-### Adding New Plugins
-
-1. Use the `make add_zsh_plugin` command to add new plugins
-2. Plugins will be automatically loaded by ZSH
-
-### Modifying Aliases
-
-Edit the `sh/02-aliases.sh` file to add or modify aliases.
-
-### Configuring PATH
-
-Edit the `sh/01-path.sh` file to modify PATH configurations.
-
 
 ## FAQ
 

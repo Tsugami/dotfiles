@@ -1,9 +1,10 @@
-.PHONY: all setup download_git_modules setup_tmux link add_zsh_plugin
+.PHONY: all setup download_git_modules setup_tmux link
 
 all: setup
+	fish
+
 setup: download_git_modules setup_tmux link
 	@echo "[INFO] Setup complete"
-	@echo "[WARNING] Please reload your shell to apply the changes"
 
 download_git_modules:
 	@echo "[INFO] Downloading git modules..."
@@ -22,11 +23,3 @@ setup_tmux:
 	@echo "[INFO] Linking tmux files..."
 	@ln -s -f $(PWD)/.config/tmux/.tmux.conf $(HOME)
 	@ln -s -f $(PWD)/.config/tmux/.tmux.conf.local $(HOME)
-
-add_zsh_plugin:
-	@if [ "$(url)" = "" ]; then \
-		echo "Usage: make add_zsh_plugin url=<plugin_url>"; \
-		exit 1; \
-	fi
-	@mkdir -p $(DOTFILES)/ohmyzsh-custom/plugins
-	git submodule add $(url) $(DOTFILES)/ohmyzsh-custom/plugins/$(shell basename $(url) .git)
