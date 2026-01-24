@@ -12,26 +12,26 @@ if command -v asdf >/dev/null 2>&1
     asdf completion fish | source
 end
 
-if command -v gh >/dev/null 2>&1
-    log_debug "Adding gh completions"
-    gh completion -s fish | source
-end
+# if command -v gh >/dev/null 2>&1
+#     log_debug "Adding gh completions"
+#     gh completion -s fish | source
+# end
 
 
-if command -v kubectl >/dev/null 2>&1
-    log_debug "Adding kubectl completions"
-    kubectl completion fish | source
-end
+# if command -v kubectl >/dev/null 2>&1
+#     log_debug "Adding kubectl completions"
+#     kubectl completion fish | source
+# end
 
 if command -v helmfile >/dev/null 2>&1
     log_debug "Adding helmfile completions"
     helmfile completion fish | source
 end
 
-if command -v terraform >/dev/null 2>&1
-    log_debug "Adding terraform autocomplete"
-    complete -c terraform -f
-end
+# if command -v terraform >/dev/null 2>&1
+#     log_debug "Adding terraform autocomplete"
+#     complete -c terraform -f
+# end
 
 if command -v asdf >/dev/null 2>&1; and test -d "$ASDF_DIR/plugins/golang"
     log_debug "Adding Golang environment setup"
