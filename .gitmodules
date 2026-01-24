@@ -1,15 +1,17 @@
 [submodule ".config/tmux"]
 	path = .config/tmux
 	url = git@github.com:Tsugami/.tmux.git
-[submodule "ohmyzsh-custom/plugins/zsh-syntax-highlighting"]
-	path = ohmyzsh-custom/plugins/zsh-syntax-highlighting
+[submodule "zsh/ohmyzsh-custom/plugins/zsh-syntax-highlighting"]
+	path = zsh/ohmyzsh-custom/plugins/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
-[submodule "ohmyzsh-custom/plugins/zsh-autosuggestions"]
-	path = ohmyzsh-custom/plugins/zsh-autosuggestions
+[submodule "zsh/ohmyzsh-custom/plugins/zsh-autosuggestions"]
+	path = zsh/ohmyzsh-custom/plugins/zsh-autosuggestions
 	url = git@github.com:zsh-users/zsh-autosuggestions.git
-[submodule "ohmyzsh-custom/themes/powerlevel10k"]
-	path = ohmyzsh-custom/themes/powerlevel10k
+[submodule "zsh/ohmyzsh-custom/themes/powerlevel10k"]
+	path = zsh/ohmyzsh-custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
-[submodule "ohmyzsh-custom/plugins/zsh-you-should-use"]
-	path = ohmyzsh-custom/plugins/zsh-you-should-use
+[submodule "zsh/ohmyzsh-custom/plugins/zsh-you-should-use"]
+	path = zsh/ohmyzsh-custom/plugins/zsh-you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
+[submodule "ohmyzsh-custom/plugins/zsh-autosuggestions"]
+	url = zsh/ohmyzsh-custom/plugins/zsh-autosuggestions.url

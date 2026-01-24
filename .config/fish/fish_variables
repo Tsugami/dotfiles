@@ -1,0 +1,4 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR DF_LOG_LEVEL:debug
+SETUVAR __fish_initialized:4300
