@@ -36,3 +36,7 @@ alias dc="docker compose"
 
 alias ghpr="gh pr create -f"
 alias ghprd="gh pr create -f -d"
+
+alias gp="git push origin HEAD"
+alias glrm="git pull origin main --rebase"
+
