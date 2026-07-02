@@ -7,7 +7,7 @@ set -gx EDITOR "vim"
 
 # Shell
 set -gx SHELL_NAME "fish"
-set -gx SHELL_PATH "/usr/bin/fish"
+set -gx SHELL_PATH (command -v fish)
 
 # Rust
 set -gx RUST_CARGO_PATH $HOME/.cargo
