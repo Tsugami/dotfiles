@@ -1,28 +1,6 @@
-afont-size = 18
+font-size = 18
 
 window-padding-x = 4
 window-padding-y = 4
 
-# Ayu Mirage — matches tmux theme
-background = #1f2430
-foreground = #cccac2
-cursor-color = #ffcc66
-selection-background = #33415e
-selection-foreground = #cccac2
-
-palette = 0=#191e2a
-palette = 1=#ff3333
-palette = 2=#bae67e
-palette = 3=#ffd580
-palette = 4=#73d0ff
-palette = 5=#d4bfff
-palette = 6=#95e6cb
-palette = 7=#cbccc6
-palette = 8=#686868
-palette = 9=#ff3333
-palette = 10=#bae67e
-palette = 11=#ffd580
-palette = 12=#73d0ff
-palette = 13=#d4bfff
-palette = 14=#95e6cb
-palette = 15=#ffffff
+theme = Ayu Mirage
