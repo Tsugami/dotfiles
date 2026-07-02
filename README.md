@@ -57,6 +57,57 @@ To update all configurations:
 make setup
 ```
 
+## Tmux Shortcuts
+
+Prefix: `Ctrl+b` or `Ctrl+a`
+
+### Sessions
+
+| Shortcut | Action |
+|---|---|
+| `prefix + C-c` | New session |
+| `prefix + C-f` | Find session |
+| `prefix + BTab` | Last session |
+
+### Windows
+
+| Shortcut | Action |
+|---|---|
+| `prefix + C-h` | Previous window |
+| `prefix + C-l` | Next window |
+| `prefix + Tab` | Last active window |
+
+### Panes
+
+| Shortcut | Action |
+|---|---|
+| `prefix + -` | Split horizontal |
+| `prefix + _` | Split vertical |
+| `prefix + h/j/k/l` | Navigate panes |
+| `prefix + H/J/K/L` | Resize pane |
+| `prefix + <` / `>` | Swap pane |
+| `prefix + +` | Maximize pane |
+| `prefix + z` | Toggle zoom pane |
+| `prefix + q` | Show pane indexes |
+
+### Copy mode
+
+| Shortcut | Action |
+|---|---|
+| `prefix + Enter` | Enter copy mode |
+| `v` | Begin selection |
+| `y` | Copy selection |
+| `C-v` | Rectangle selection |
+
+### General
+
+| Shortcut | Action |
+|---|---|
+| `prefix + r` | Reload config |
+| `prefix + e` | Edit local config |
+| `prefix + m` | Toggle mouse |
+| `prefix + t` | Clock |
+
 ## FAQ
 
 ### Unzip ssh folder
