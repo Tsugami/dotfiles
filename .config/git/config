@@ -1,9 +1,11 @@
 [user]
 	email = yslanramos.r@gmail.com
 	name = Yslan Ramos
+	signingkey = 43AAF72D3C791495
 
 [init]
  	default = main
+	defaultBranch = main
 [core]
 	editor = vim
 	pager = delta
@@ -49,6 +51,9 @@
 	frag = magenta bold
 	old = red bold
 	new = green bold
+[commit]
+	template = /home/yslan/.git_commit_msg_template.txt
+	gpgsign = true
 [interactive]
     diffFilter = delta --color-only
 [delta]
@@ -60,3 +65,5 @@
 	colorMoved = default
 [pull]
 	rebase = true
+[tag]
+	gpgsign = true

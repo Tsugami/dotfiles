@@ -8,3 +8,5 @@ success_symbol = '[λ](bold green)'
 [kubernetes]
 disabled = false
 format = '[\[k8s:$context\]](dimmed green) '
+
+
